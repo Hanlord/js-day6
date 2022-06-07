@@ -112,7 +112,8 @@ function Total() {
         total = total + (val.price * val.qtty);
         if (total >= 100) {
             discount = total * 0.9;
-            document.getElementById("price").innerHTML = discount.toFixed(2) + " €";
+            discount1 = total * 0.1;
+            document.getElementById("price").innerHTML = `${discount.toFixed(2)}€ (discount: ${discount1.toFixed(2)}€) `;
         } else
             document.getElementById("price").innerHTML = total.toFixed(2) + " €";
     }
