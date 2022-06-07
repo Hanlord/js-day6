@@ -1,4 +1,4 @@
-/**
+ /**
  * JavaScricpt Shopping Cart
  */
 var products = [{
@@ -120,6 +120,13 @@ function Total() {
         else 
         document.getElementById("price").innerHTML = total.toFixed(2) + " €";
     }
+ 
+var temp = 0;
+for (i = 0 ; i < cart.length; i++){
+    temp = temp + cart[i].qtty
+    console.log(temp)
+}
+    document.getElementById("quantity").innerHTML= `${temp}`
     // document.getElementById("price").innerHTML = total.toFixed(2) + " €";
 }
 
